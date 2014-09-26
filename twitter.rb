@@ -19,7 +19,8 @@ post '/' do
 
   if (client.user? @name) && (@number <= 10) && (@number >=1)                 
     contactos = client.friends(@name,{}).take(@number)
-    @seguidores =(@seguidores != '') ? contactos.map{ |i| [i.name ,i.followers_count]} : '' .sort_by!{|a,b| -b}
+    @seguidores =(@seguidores != '') ? contactos.map{ |i| [i.name ,i.followers_count]} : ''
+    @seguidores.sort_by!{|a,b| -b}
   end
 
   erb :twitter
