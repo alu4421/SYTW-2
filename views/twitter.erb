@@ -91,7 +91,7 @@
 
 			<% if @name != ''%>
 				<%if @number>10%>
-					<p id="warning"> Sólo se puede mostrar hasta 10 amigos </p>
+					<p id="warning"> Sólo se puede mostrar hasta 10 contactos </p>
 				<%elsif @seguidores.length <= 0 %>
 					<p id="warning">El usuario no existe o no tiene seguidoress</p>
 				<%elsif @seguidores.length < @number %>
